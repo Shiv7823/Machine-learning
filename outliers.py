@@ -3,12 +3,12 @@ from fastapi import FastAPI
 from meta import var_data
 import pickle
 app = FastAPI()
-pickle_in = open("/Users/shridharmankar/Complete Data Science Basics To Advanced/outlier.pkl","rb")
+pickle_in = open("outlier.pkl","rb")
 classifier=pickle.load(pickle_in)
 
 @app.get('/')
 def index():
-    return {'Deployment': 'Hello and Welcome to 5 Minutes Engineering'}
+    return {'Welcome'}
 
 @app.post('/predict')
 def predict(data:var_data):
