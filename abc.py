@@ -8,7 +8,7 @@ classifier=pickle.load(pickle_in)
 
 @app.get('/')
 def index():
-    return {'Deployment': 'Hello and Welcome to 5 Minutes Engineering'}
+    return {'Welcome'}
 
 @app.post('/predict')
 def predict(data:iris_data):
